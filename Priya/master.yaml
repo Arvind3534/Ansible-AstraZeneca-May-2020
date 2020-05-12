@@ -1,0 +1,12 @@
+- name: This iis the main yaml file
+
+  hosts: all
+
+  tasks:
+    - include: create_group.yaml 
+    - include: create_user.yaml
+    - include: install_httpd.yaml
+    - include: start_enable_httpd.yaml
+    - include: create_index.yaml
+    - include: install_git.yaml
+    - include: clone_git.yaml

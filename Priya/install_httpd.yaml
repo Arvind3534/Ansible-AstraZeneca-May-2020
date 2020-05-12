@@ -1,0 +1,10 @@
+---
+  - name: This install httpd package 
+
+    hosts: all
+    tasks:
+
+    - name: install httpd package 
+      yum: state=present name=httpd
+
+

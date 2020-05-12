@@ -41,4 +41,5 @@
         repo: https://github.com/scmgalaxy/ansible-role-template
         dest: /root/Pramoda_Jena/git
         clone: yes
+:wq
 

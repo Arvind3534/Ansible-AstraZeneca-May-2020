@@ -1,0 +1,10 @@
+---
+  - name: This copies index.html file
+
+    hosts: all
+    tasks:
+
+    - name: copy indevx.html file
+      copy: dest=/var/www/html src=index.html
+
+

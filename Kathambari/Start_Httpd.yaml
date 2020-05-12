@@ -1,0 +1,8 @@
+- name: Program 4
+  hosts: all
+  tasks:	
+    - name: Start HTTPD
+      service: name=httpd state=started
+    - name: Ansible debug print.
+      debug:
+        msg: "HTTPD started"

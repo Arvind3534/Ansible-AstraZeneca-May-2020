@@ -1,0 +1,8 @@
+- name: Program 5
+  hosts: all
+  tasks:	
+    - name: Create HTML File
+      copy: dest=/var/www/html src=index.html
+    - name: Ansible debug print.
+      debug:
+        msg: "HTML file created"	

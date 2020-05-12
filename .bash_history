@@ -303,3 +303,83 @@ cd pramod/
 pwd 
 ls -ll
 vi inventory 
+ls
+cd ec2-user/
+ls
+cat inv
+cat ind.html 
+cd priya/
+cd Priya/
+ls
+cat inventory 
+cp create_group.yaml ../prayerna/
+35.154.57.155   ansible_user=ec2-user ansible_ssh_pass=devops123 ansible_become=yes
+#13.234.116.49  ansible_user=raju ansible_ssh_pass=raju123 ansible_become_user=ec2-user ansible_become_pass=raju123 ansible_become_method=yes
+[db]
+13.235.243.154
+[gog:children]
+web
+db
+[db:vars]
+ansible_user=ec2-user
+ansible_ssh_private_key_file=rajesh-mumbai.pem
+ansible_become=yes
+[app]
+35.154.57.155
+13.234.116.49
+ls
+cat create_group.yaml
+vi create_group.yaml 
+cat create_group.yaml
+ls
+cat create_group.yaml
+cat install_git.yaml 
+ls
+cat index.html 
+ls
+cat inventory
+ls
+cat create_index.yaml 
+ls
+cat install_httpd.yaml 
+ls
+cat start_enable_httpd.yaml 
+ls
+cat second.html 
+cat create_index.yaml 
+cat create_user.yaml 
+ls
+cat clone_git.yaml 
+cd ..
+ls
+cd priyanka/
+ls
+cd ..
+hinduja/
+ls
+ls
+cp inventory Prayerna/
+ls
+cp rajesh-mumbai.pem Prayerna/
+cd priyanka/
+ls
+cd ..
+cd prayerna
+cd Prayerna/
+ls
+cat inventory 
+vi inventory 
+cd ..
+ls
+cd Priya/
+ls
+cat inventory 
+cat create_user.yaml 
+cat create_group.yaml 
+ls 
+cd ..
+ls
+cd prayerna/
+cd ..
+ls
+sudo -s
