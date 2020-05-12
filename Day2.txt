@@ -145,7 +145,214 @@ ansible gog -i inventory -m service -a"name=httpd state=started"
 ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
 ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
 
+==========================================================================================
 
+PROBLEMS
+=================
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+================================================================================
+
+Answer - Playbook
+
+What is Playbook?
+represent in YAML
+===========================
+PLAY1
+	Host(S) - This is group name of servers where it need to be executed
+	TASK(S)
+		Task1 - ONE Module name with Param
+		Task2 - ONE Module name with Param
+		Task3 - ONE Module name with Param
+		Task4 - ONE Module name with Param
+PLAY2	
+	Host(S) - This is group name of servers where it need to be executed
+	TASK(S)
+		Task1 - ONE Module name with Param
+		Task2 - ONE Module name with Param
+		Task3 - ONE Module name with Param
+		Task4 - ONE Module name with Param
+
+PLAY3
+	Host(S) - This is group name of servers where it need to be executed
+	TASK(S)
+		Task1 - ONE Module name with Param
+		Task2 - ONE Module name with Param
+		Task3 - ONE Module name with Param
+		Task4 - ONE Module name with Param
+
+===============================================================
+
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  tasks:
+  - name: Install the httpd apps
+    yum: name=httpd state=installed
+  - name: start the httpd service
+    service: name=httpd state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test"
+
+...
+
+$ ansible-playbook -i inventory web.yaml
+
+----------------------------------------------------
+---
+
+How to manage large playbook??????????
+===================USING PLAYBOOK=========================================
+https://www.devopsschool.com/blog/ansible-include-scnario-with-list-of-plays-or-tasks/
+
+master.yaml(Playbook)
+	first(play)
+	second(play)
+
+1.yaml
+---
+- name: This sets up an httpd webserver
+  hosts: web
+  tasks:
+  - name: Install the httpd apps
+    yum: name=httpd state=installed
+  - name: start the httpd service
+    service: name=httpd state=started
+
+2.yaml
+---
+- name: This sets up an httpd webserver
+  hosts: db
+  tasks:
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test"
+
+------------master.yaml------------------
+- include: 1.yaml
+- include: 2.yaml
+
+
+$ ansible-playbook -i inventory master.yaml
+
+===============================USING Task file=====================================================
+taskmain.yaml
+---
+- name: This sets up an httpd webserver
+  hosts: db,web
+  tasks:
+  - name: Install the httpd apps
+    yum: name=httpd state=installed
+  - include: 3.yaml
+  - include: 4.yaml
+  - include: 5.yaml
+
+--------------3.yaml----------------
+  - name: start the httpd service
+    service: name=httpd state=started
+
+--------------4.yaml----------------
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+
+--------------5.yaml----------------
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test"
+
+ansible-playbook -i inventory taskmain.yaml
+
+ACS
+==================================================
+35.154.57.155
+$ ec2-user
+$ sudo -s
+$ cd
+
+
+Ravi			13.235.81.86	
+Subash			13.235.243.154		
+Prayerna Bhat		13.234.116.49	
+Azhar Md Ali		13.233.79.123		
+Radha Thirunavukkarasu	13.232.184.79
+Manickam Kamalakkannan	13.126.186.7
+Priya Kesavan		13.233.199.245
+Kathambari		3.7.71.56			
+Muthukumaran Loganathan	13.234.67.56
+Pramoda Kumar Jena	13.233.47.180	
+Rajakumar Dharmalingam	13.233.74.93	
+Sathyaprakash		13.232.168.191
+Sankar S		13.127.74.16	
+Nirmala Dhashnamurthy	13.127.153.192	
+Hinduja sivaji		13.233.100.212	
+Priyanka Ashokan	13.126.15.17
+
+Extra 1 - 3.7.45.188
+Extra 2 - 13.233.103.214
+Extra 3 - 13.234.75.53
+Extra 4 - 3.7.46.9
+
+	
 
 
 
