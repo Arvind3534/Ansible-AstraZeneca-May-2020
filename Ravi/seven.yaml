@@ -1,0 +1,9 @@
+---
+- name: assignment
+  hosts: all
+  tasks:
+  - name: install wget
+    yum: state=present name=wget
+  - name: install git
+    yum: state=present name=git
+  

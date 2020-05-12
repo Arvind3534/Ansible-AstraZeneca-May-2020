@@ -1,0 +1,25 @@
+Ansible Adhoc Commands Lab & Excercise – Part 1
+---------------------------------------------------
+
+ansible localhost -m group -a"name=deploy state=present"
+
+ansible localhost -m user -a"name=deploy-user group=deploy shell=/bin/bash"
+
+ansible localhost -m yum -a"state=present  name=httpd"
+
+ansible localhost -m service -a"name=httpd state=started enabled=yes" 
+
+ansible localhost -m file -a"dest=/var/www/html src=index.html" 
+
+ansible localhost -m copy -a"dest=/var/www/html src=second.html"
+ 
+ansible localhost -m yum -a"state=present  name=git"
+
+
+ansible localhost -m git -a"repo=https://github.com/scmgalaxy/ansible-role-template dest=/root/ansible clone=yes"
+
+ansible localhost -m reboot -a"reboot_timeout=3600 masg=This server is going to reboot"
+
+
+ansible localhost -m file -a"path=/opt/devopsschool.txt state=touch"
+ansible localhost -m file -a"path=/opt/devopsschool.txt state=absent"

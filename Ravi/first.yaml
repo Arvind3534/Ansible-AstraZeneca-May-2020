@@ -1,0 +1,7 @@
+---
+- name: assignment
+  hosts: all
+  tasks:
+  - name: create group called deploy
+    group: name=deploy local=yes
+

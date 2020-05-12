@@ -1,4 +1,4 @@
--name: To install wget and wget
+- name: To install wget and git
   hosts: all
   tasks:
   - name: install wget

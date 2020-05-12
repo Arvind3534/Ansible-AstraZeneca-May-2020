@@ -1,0 +1,15 @@
+---
+- name: Assignment 3
+  hosts: all
+  vars_files:
+    - Var_Ext.yaml
+  tasks:
+  - name: Install HTTPD
+    yum: name={{ package }} state=installed
+  - name: Start HTTPD
+    service: name={{ service }} state=started
+  - name: Create HTML File
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "{{ myname }} installed {{ package }}"

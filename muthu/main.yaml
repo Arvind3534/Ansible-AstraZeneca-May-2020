@@ -1,3 +1,6 @@
 - include: t1.yaml
 - include: t2.yaml
 - include: t3.yaml
+- include: t4.yaml
+- include: t5.yaml
+- include: t7.yaml

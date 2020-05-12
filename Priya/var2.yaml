@@ -1,0 +1,11 @@
+---
+- name: This installs and start webserver.Variable taken form playbook
+  hosts: all
+  vars:
+    package: "httpd"
+    service: "httpd"
+  tasks:
+  - name: Install httpd package
+    yum: name={{ package }} state=installed
+  - name: start httpd service
+    service: name={{ service }} state=started

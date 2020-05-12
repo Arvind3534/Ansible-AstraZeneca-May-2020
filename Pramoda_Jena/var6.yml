@@ -1,0 +1,15 @@
+---
+- name: Create a playbook and setup a webserver(httpd), pass the httpd package name decalared on command prompt
+  hosts: all
+  tasks:
+    - name: going  to install {{ package }} on server
+      yum:
+        name: "{{ package }}"
+        state: present
+    - name: staring {{ service }} on server 
+      service:
+        name: "{{ service }}"
+        state: started
+        enabled: true
+
+     

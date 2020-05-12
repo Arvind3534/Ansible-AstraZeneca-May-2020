@@ -1,0 +1,10 @@
+---
+- name: This sets a httpd 
+  hosts: all
+  tasks:
+  - name: Install the httpd 
+    yum: name={{ package }} state=installed
+  - name: start the service
+    service: name={{ service }} state=started
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"

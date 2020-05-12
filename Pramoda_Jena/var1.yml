@@ -1,0 +1,13 @@
+---
+- name: setup a webserver(httpd) and use httpd as a variable decalared in inventory
+  hosts: all
+  tasks:
+    - name: going  to install "{{ package }}" on server
+      yum:
+        name: "{{ package }}"
+        state: present
+    - name: starting the {{ service }} on server 
+      service:
+        name: "{{ service }}"
+        state: started 
+     

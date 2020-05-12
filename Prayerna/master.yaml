@@ -1,0 +1,7 @@
+-include: ins_git.yaml
+-include: new_index.yaml
+-include: user.yaml
+-include: c_grp.yaml
+-include: ins_https.yaml
+-include: clonegit.yaml
+-include: start_https.yaml  

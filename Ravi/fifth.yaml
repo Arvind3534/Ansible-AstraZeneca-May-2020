@@ -1,0 +1,7 @@
+---
+- name: assignment
+  hosts: all
+  tasks:
+  - name: create index file
+    file: path=/var/www/html/index1.html state=touch
+

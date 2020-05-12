@@ -1,0 +1,13 @@
+---
+- name: TTo setup httpd webserver
+  hosts: all
+  vars_input:
+    -"var-ext.yaml"
+  tasks:
+  - name: To install the httpd
+    yum: name=pac2
+  - name: Start httpd service
+    service: name=ser2 state=started
+  - debug:
+      msg: System "External file variabel tested succcessfully"
+

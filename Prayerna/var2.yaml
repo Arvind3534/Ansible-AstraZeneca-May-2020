@@ -1,0 +1,15 @@
+---
+        - name: This sets up an http webserver
+          hosts: db
+          vars:
+            httpvar: "httpd"
+          tasks:
+          - name: Install the http apps
+            yum: name={{httpvar}}
+          - name: start the http_var service
+            service: name={{httpvar}} state=started
+          - name: create a empty fle
+            file: dest=/opt/test.txt state=touch
+          - name: copy a file
+            copy: dest=/var/www/html/ src="/root/index.html"
+

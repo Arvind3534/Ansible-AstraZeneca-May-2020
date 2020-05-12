@@ -1,0 +1,7 @@
+---
+- name: assignment
+  hosts: all
+  tasks:
+  - name: enable service httpd
+    service: name=httpd enabled=yes state=started
+

@@ -1,0 +1,3 @@
+    myname: "Radha in ext file"
+    package: "httpd"
+    service: "httpd"

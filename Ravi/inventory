@@ -1,10 +1,8 @@
 [db]
-13.232.184.79
-
+13.235.81.86 
+  
 [db:vars]
 ansible_user=ec2-user
 ansible_ssh_private_key_file=rajesh-mumbai.pem
 ansible_become=yes
-myname="Radha in inventory"
-package="httpd"
-service="httpd"
+

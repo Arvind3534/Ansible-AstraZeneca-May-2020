@@ -1,0 +1,13 @@
+---
+- name: This installs and start webserver.Variale taken from command prompt 
+  hosts: all
+  vars_prompt:
+  - name: "package"
+    prompt: "Enter the package name"
+  - name: "service"
+    prompt: "Enter the service name"
+  tasks:
+  - name: Install httpd package
+    yum: name={{ package }} state=installed
+  - name: start httpd service
+    service: name={{ service }} state=started

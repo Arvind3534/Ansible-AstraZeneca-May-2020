@@ -1,0 +1,5 @@
+- name: This will enable httpd service on Hosts
+  hosts: all
+  tasks:
+  - name: This will start enable httpd
+    service: name=httpd state=started

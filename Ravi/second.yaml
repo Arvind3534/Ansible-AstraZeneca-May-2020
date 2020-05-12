@@ -1,0 +1,7 @@
+---
+- name: assignment
+  hosts: all
+  tasks:
+  - name: create user
+    user: name=deploy-user shell=/bin/bash group=deploy
+
