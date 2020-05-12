@@ -352,6 +352,9 @@ Extra 2 - 13.233.103.214
 Extra 3 - 13.234.75.53
 Extra 4 - 3.7.46.9
 
+
+Lab and Assignment 2 - 
+https://www.devopsschool.com/blog/ansible-playbook-lab-excercise-part-2/
 	
 
 
