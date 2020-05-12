@@ -356,6 +356,214 @@ Extra 4 - 3.7.46.9
 Lab and Assignment 2 - 
 https://www.devopsschool.com/blog/ansible-playbook-lab-excercise-part-2/
 	
+==========================================================================
+==========================================================================
+Variables in Ansible?
+==================================
+https://www.devopsschool.com/tutorial/ansible/variables/index.html
+
+TYPES OF VAR
+	AUTOMATIC = CONSTANT = Never change == SYSTEM VAR == fact var
+	Custom 
+		
+what is AUTOMATIC ?
+---------------------------------------
+SYSTEM INFO
+	ohai
+	factor
+--------------------------------
+	Ansible+Puppet uses factor tools to fetch a system info.
+	
+	How can i access ars system info using ansible?
+	- setup
+
+355  clear
+  356  ls
+  357  ansible localhost -m setup
+  358  clear
+  359  ansible localhost -m setup | grep -i os
+
+https://docs.ansible.com/ansible/latest/modules/setup_module.html
+
+
+
+
+
+
+
+
+
+Why We use Custom  var?
+=========================
+Value which you want to resue multiple places.
+
+What are the places you can declare a var?
+-------------------------------------------
+command line values (eg “-u user”)
+role defaults [1]
+inventory file or script group vars [2]
+inventory group_vars/all [3]
+playbook group_vars/all [3]
+inventory group_vars/* [3]
+playbook group_vars/* [3]
+inventory file or script host vars [2]
+inventory host_vars/* [3]
+playbook host_vars/* [3]
+host facts / cached set_facts [4]
+play vars
+play vars_prompt
+play vars_files
+role vars (defined in role/vars/main.yml)
+block vars (only for tasks in block)
+task vars (only for the task)
+include_vars
+set_facts / registered vars
+role (and include_role) params
+include params
+extra vars (always win precedence)
+================================================
+https://www.devopsschool.com/tutorial/ansible/variables/index.html
+
+How to declare a var...
+----------------
+yaml
+	key: value
+INI
+	var=value
+
+1. Ansible variables in playbook
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  vars:
+    myname: "rajesh kumar"
+    package: "httpd"
+    service: "httpd"
+  tasks:
+  - name: Install the httpd apps
+    yum: name={{ package }} state=installed
+  - name: start the httpd service
+    service: name={{ service }} state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "{{ myname }}"
+
+
+ansible-playbook -i inventory var1.yaml
+
+
+
+vars_files:
+     - "var-ext.yaml"
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  vars_files:
+    - "var-ext.yaml"
+  vars:
+    myname: "rajesh kumar"
+    package: "httpd"
+    service: "httpd"
+  tasks:
+  - name: Install the httpd apps
+    yum: name={{ package }} state=installed
+  - name: start the httpd service
+    service: name={{ service }} state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "{{ myname }}"
+
+
+    myname: "rajesh kumar in inventory"
+    package: "httpd"
+    service: "httpd"
+
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  vars_prompt:
+    - name: "Version"
+      prompt: "Which version Do you want to install?"
+      private: no
+  tasks:
+  - name: Install the httpd apps
+    yum: name={{ package }} state=installed
+  - name: start the httpd service
+    service: name={{ service }} state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "{{ myname }}"
+  - name: Ansible vars_prompt print example.
+    debug:
+      msg: "{{ Version }}"
+
+
+
+
+
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  vars_prompt:
+    - name: "Version"
+      prompt: "Which version Do you want to install?"
+      private: no
+  tasks:
+  - name: Install the httpd apps
+    yum: name={{ package }} state=installed
+  - name: start the httpd service
+    service: name={{ service }} state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "{{ myname }}"
+  - name: Ansible vars_prompt print example.
+    debug:
+      msg: "{{ Version }}"
+  - name: include default step variables
+    include_vars: var-ext.yaml
+  - name: Ansible vars_prompt print example.
+    debug:
+      msg: "My age is only {{ age }}"
+
+
+
+-e "@var-ext.yaml"
+
+ 324  vi var-ext.yaml
+  325  ansible-playbook -i inventory var5.yaml -e "@var-ext.yaml"
+  326  clear
+  327  ansible-playbook -i inventory var5.yaml -e age=334
+  328  history
+
+
+
+Lab 3 - 
+https://www.devopsschool.com/blog/ansible-variable-lab-excercise-part-1/
+Q - 1 2 3 6
+
+
+
+
 
 
 
