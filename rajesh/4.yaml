@@ -1,0 +1,2 @@
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch

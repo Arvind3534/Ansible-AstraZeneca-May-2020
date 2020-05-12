@@ -1,0 +1,5 @@
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test"
