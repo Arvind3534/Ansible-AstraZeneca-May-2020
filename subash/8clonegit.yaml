@@ -1,0 +1,12 @@
+---
+- name: clone a git repo
+  hosts: all
+  tasks:
+  - name: clone a git repo
+    git: 
+      repo: https://github.com/scmgalaxy/ansible-role-template
+      dest: /var/www/html/ansible-role-template
+      clone: yes
+      recursive: yes
+...
+

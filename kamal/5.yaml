@@ -1,0 +1,6 @@
+- name: To copy
+  copy: dest=/var/www/html src=index.html
+- name: To start the service
+  shell: systemctl start httpd.service
+- name: To enable the service
+  shell: systemctl enable httpd.service

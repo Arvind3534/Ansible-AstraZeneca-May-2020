@@ -1,0 +1,9 @@
+---
+- name: To install httpd on server 
+  hosts: all
+  tasks:
+    - name: going  to install httpd on server 
+      yum:  
+        name: httpd
+        state: present
+

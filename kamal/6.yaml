@@ -1,0 +1,2 @@
+- name: copy a file
+  shell: curl http://13.126.186.7/second.html

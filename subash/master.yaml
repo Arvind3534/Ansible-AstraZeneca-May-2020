@@ -1,0 +1,10 @@
+---
+- include: 1group.yaml
+- include: 2user.yaml
+- include: 3installhttp.yaml
+- include: 4enable.yaml
+- include: 5copy.yaml
+- include: 7installgit.yaml
+- include: 8clonegit.yaml
+
+...

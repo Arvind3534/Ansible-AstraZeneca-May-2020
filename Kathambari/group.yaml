@@ -1,0 +1,7 @@
+---
+- name: This creates a group deploy and add user to it
+  hosts: all
+  tasks:
+  - name: Create the group
+    group: name=deploy
+  - include user.yaml

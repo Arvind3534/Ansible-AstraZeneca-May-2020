@@ -1,0 +1,18 @@
+---
+- name: To clone git repository  
+  hosts: all
+  tasks:
+    - name: going to install git  
+      yum:  
+        name: 
+           - git
+           - wget 
+        state: present 
+     
+    - name: to clone the git repository
+      git:
+        repo: https://github.com/scmgalaxy/ansible-role-template 
+        dest: /root/Pramoda_Jena/git
+        clone: yes
+       
+     

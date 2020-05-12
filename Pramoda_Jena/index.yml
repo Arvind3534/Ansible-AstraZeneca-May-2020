@@ -1,0 +1,9 @@
+---
+- name: to crtae the index.tml file on /var/www/html location   
+  hosts: all
+  tasks:
+    - name: going  to create the index.html file  
+      file:  
+        path: /var/www/html/index.html
+        state: touch
+        

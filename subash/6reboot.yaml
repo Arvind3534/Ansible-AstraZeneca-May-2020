@@ -1,0 +1,9 @@
+---
+- name: reboot a remote machine
+  hosts: all
+  tasks:
+  - name: reboot a remote machine
+    reboot:
+      msg: "reboot initiated by ansible"
+...
+

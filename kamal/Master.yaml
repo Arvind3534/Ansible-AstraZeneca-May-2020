@@ -1,0 +1,14 @@
+---
+- name: This sets up an httpd webserver
+  hosts: Web-Test
+  tasks:
+  - name: To create a group named deploy
+    shell: groupadd deploy
+  - include: 2.yaml
+  - include: 3.yaml
+  - include: 4.yaml
+  - include: 5.yaml
+  - include: 6.yaml
+  - include: 7.yaml
+#  - include: 8.yaml
+  - include: 10.yaml

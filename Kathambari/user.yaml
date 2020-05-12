@@ -1,0 +1,9 @@
+---
+  - name: This creates a group deploy and add user to it
+    hosts: all
+    tasks:
+    - name: Create user
+      user: name=deploy-user group=deploy
+    - name: Ansible debug print.
+      debug:
+        msg: "Group created"

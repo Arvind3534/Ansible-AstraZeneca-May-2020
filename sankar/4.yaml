@@ -1,0 +1,6 @@
+- name: to Create Empty File
+  hosts: all
+  tasks:
+  - name: create a empty fle
+    file: dest=/root/sankar/ansibletest.txt state=touch
+  - name: copy a file

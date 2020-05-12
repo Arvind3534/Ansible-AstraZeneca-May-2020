@@ -1,0 +1,5 @@
+- name: This is to create a group named deploy
+  hosts: all
+  tasks:
+  - name: create group
+    group: name=deploy local=yes

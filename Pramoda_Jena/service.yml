@@ -1,0 +1,9 @@
+---
+- name: To start and enable  httpd service  
+  hosts: all
+  tasks:
+    - name: going  to start and enable the nttpd service in server  
+      service:  
+        name: httpd
+        state: started 
+        enabled: yes

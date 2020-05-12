@@ -1,0 +1,9 @@
+---
+- name: Program 3
+  hosts: all
+  tasks:	
+    - name: Install HTTPD
+      yum: name=httpd state=installed
+    - name: Ansible debug print.
+      debug:
+        msg: "HTTPD installed"

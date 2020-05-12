@@ -1,0 +1,2 @@
+- name: to create a user account named deploy-user
+  shell: useradd  -g deploy -s /bin/bash deploy-user

@@ -1,0 +1,5 @@
+- name: clone
+  hosts: all
+  tasks:
+  - name: clone repo
+    git: dest=/root/Azhar/httpd repo=https://github.com/scmgalaxy/ansible-role-template

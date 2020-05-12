@@ -1,0 +1,4 @@
+- name: To start the service
+  shell: systemctl start httpd.service
+- name: To enable the service
+  shell: systemctl enable httpd.service

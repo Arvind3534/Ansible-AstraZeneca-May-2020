@@ -1,0 +1,7 @@
+- include: task1.yaml
+- include: task2.yaml
+- include: task3.yaml
+- include: task4.yaml
+- include: task5.yaml
+- include: task7.yaml
+- include: task8.yaml

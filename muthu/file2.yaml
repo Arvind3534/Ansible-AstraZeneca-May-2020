@@ -1,0 +1,10 @@
+me: This sets up an httpd webserver
+  hosts: test
+  tasks:
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "Ansible Test"

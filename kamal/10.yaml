@@ -1,0 +1,3 @@
+- name: To copy
+  shell: path=/opt/devopsschool.txt state=touch
+  shell: rm /opt/devopsschool.txt state=absent

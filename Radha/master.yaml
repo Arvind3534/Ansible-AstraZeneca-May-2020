@@ -1,0 +1,5 @@
+- include: deploy.yaml
+- include: httpd.yaml
+- include: test_httpd.yaml
+- include: install_git_wget.yaml
+- include: git.yaml
