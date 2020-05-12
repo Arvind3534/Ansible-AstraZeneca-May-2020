@@ -1,0 +1,152 @@
+ACS - 35.154.57.155
+ec2-user
+key
+
+ARS 1 - 13.234.116.49
+ARS 2 - 13.235.243.154
+==============================================
+
+
+What is aka inventory aka hosts?????
+================================================
+inventory is nothing but [ list of IP addresss - ARS]
+	Can be passed on commmand line
+	can be passed into file separetd by new line.
+	can be passed into script
+	
+	inventory has custom group
+	inventory has behavioural parameters
+	inventory has group of group
+	inventory has behavioural parameters as group vars
+
+inventory group type
+	default - all, nogroup
+			all - each host of inventory file.
+			nogroup - a host which belong to no custom group but all
+	custom 
+		
+
+------------------inventory-----INI format----------------
+35.154.57.155
+13.234.116.49
+13.235.243.154
+
+------------------inventory-----custom group----------------
+
+[web]
+35.154.57.155
+13.234.116.49
+
+[db]
+13.235.243.154
+
+[app]
+35.154.57.155
+13.234.116.49
+13.234.116.47
+13.234.116.46
+13.234.116.42
+13.234.116.44
+13.234.116.43
+
+
+ansible web -i inventory -m yum -a"state=present  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
+ansible web -i inventory -m copy -a"dest=/var/www/html src=index.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
+ansible web -i inventory -m service -a"name=httpd state=started" -u=ec2-user --key-file=rajesh-mumbai.pem -b
+ansible web -i inventory -m file -a"path=/tmp/ansible state=directory" -u=ec2-user --key-file=rajesh-mumbai.pem -b
+ansible web -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" -u=ec2-user --key-file=rajesh-mumbai.pem -b
+
+-----------------------inventory has behavioural parameters-------------------------------
+https://docs.ansible.com/ansible/2.3/intro_inventory.html#list-of-behavioral-inventory-parameters
+
+[web]
+35.154.57.155	ansible_user=ec2-user ansible_ssh_pass=devops123 ansible_become=yes
+13.234.116.49	ansible_user=raju ansible_ssh_pass=raju123 ansible_become_user=ec2-user ansible_become_pass=raju123 ansible_become_method=yes
+13.235.243.154  ansible_user=ec2-user ansible_ssh_private_key_file=rajesh-mumbai.pem ansible_become=yes
+
+[app]
+35.154.57.155
+13.234.116.49
+13.234.116.47
+13.234.116.46
+13.234.116.42
+13.234.116.44
+13.234.116.43
+
+35.154.57.155
+ec2-user
+devops123
+
+13.234.116.49
+raju
+raju123
+
+ansible web -i inventory -m yum -a"state=present  name=httpd" 
+ansible web -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible web -i inventory -m service -a"name=httpd state=started" 
+ansible web -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible web -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+------------------------inventory has group of group---------------------------------------------------
+
+[web]
+35.154.57.155	ansible_user=ec2-user ansible_ssh_pass=devops123 ansible_become=yes
+13.234.116.49	ansible_user=raju ansible_ssh_pass=raju123 ansible_become_user=ec2-user ansible_become_pass=raju123 ansible_become_method=yes
+
+[db]
+13.235.243.154  ansible_user=ec2-user ansible_ssh_private_key_file=rajesh-mumbai.pem ansible_become=yes
+
+[app]
+35.154.57.155
+13.234.116.49
+13.234.116.47
+13.234.116.46
+13.234.116.42
+13.234.116.44
+13.234.116.43
+
+ansible web,db -i inventory -m yum -a"state=present  name=httpd" 
+ansible web,db -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible web,db -i inventory -m service -a"name=httpd state=started" 
+ansible web,db -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible web,db -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+
+=======
+[web]
+35.154.57.155	ansible_user=ec2-user ansible_ssh_pass=devops123 ansible_become=yes
+13.234.116.49	ansible_user=raju ansible_ssh_pass=raju123 ansible_become_user=ec2-user ansible_become_pass=raju123 ansible_become_method=yes
+
+[db]
+13.235.243.154 
+  
+[gog:children]
+web
+db
+
+[db:vars]
+ansible_user=ec2-user
+ansible_ssh_private_key_file=rajesh-mumbai.pem
+ansible_become=yes
+
+
+
+[app]
+35.154.57.155
+13.234.116.49
+13.234.116.47
+13.234.116.46
+13.234.116.42
+13.234.116.44
+13.234.116.43
+
+
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+ansible gog -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+ansible gog -i inventory -m service -a"name=httpd state=started" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible state=directory" 
+ansible gog -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" 
+
+
+
+
+
+
