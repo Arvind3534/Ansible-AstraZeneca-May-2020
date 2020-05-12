@@ -1,0 +1,20 @@
+---
+- name: Program 9
+  hosts: all
+  tasks:
+  - name: Create the group
+    group: name=deploy
+  - name: Create user
+    user: name=deploy-user group=deploy
+  - name: Install HTTPD
+    yum: name=httpd state=installed
+  - name: Start HTTPD
+    service: name=httpd state=started
+  - name: Create HTML File
+    copy: dest=/var/www/html src=index.html
+  - name: Install Git
+    yum: name=git state=installed
+  - name: Install wget
+    yum: name=wget state=installed
+  - name: Clone Git
+    git: dest=/var/www/html/git repo=https://github.com/scmgalaxy/ansible-role-template 

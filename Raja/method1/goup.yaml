@@ -1,0 +1,4 @@
+- name: To create gorup
+  group:
+    name: Deploy
+    state: present

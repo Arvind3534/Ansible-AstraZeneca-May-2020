@@ -2,44 +2,38 @@
 - name: Ansible Playbook Lab & Excercise – Part 2
   hosts: all
   tasks:
-   - name: going  to create the group
-     group:
-       name: deploy
-       state: present
-		
-   - name: going  to create the deploy-user
-     user:
-       name: deploy-user
-       group: deploy
-       shell: /bin/bash
-
-   - name: going  to install httpd on server
-     yum:
-       name: httpd
-       state: present
-		
-   - name: going  to start and enable the nttpd service in server
-     service:
-       name: httpd
-       state: started
-       enabled: yes
-	
-   - name: going  to create the index.html file
-     file:
-       path: /var/www/html/index.html
-       state: touch
-		
-   - name: going to install git and wget 
-     yum:
-       name:
-         - git
-         - wget
-       state: present
-
-   - name: to clone the git repository
-     git:
-        repo: https://github.com/scmgalaxy/ansible-role-template
-        dest: /root/Pramoda_Jena/git
-        clone: yes
-:wq
+    - name: going  to create the group
+      group:
+        name: deploy
+        state: present		
+    - name: going  to create the deploy-user
+      user:
+        name: deploy-user
+        group: deploy
+        shell: /bin/bash
+    - name: going  to install httpd,wget and git on server
+      yum:
+        name: 
+          - httpd
+          - git
+          - wget
+        state: present
+    - name: going  to start and enable the nttpd service in server
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+    - name: going  to create the index.html file
+      file:
+        path: /var/www/html/index.html
+        state: touch
+    - name: copy the content
+      copy:
+        content: "Welcome to the Devops1training.com i!\n"
+        dest: /var/www/html/index.html
+    - name: to clone the git repository
+      git:
+         repo: https://github.com/scmgalaxy/ansible-role-template
+         dest: /root/Pramoda_Jena/git
+         clone: yes
 

@@ -1,10 +1,10 @@
 ---
-  - name: This copies index.html file 
+  - name: This creates index.html file 
 
     hosts: all
     tasks:
 
-    - name: copy indevx.html file 
-      copy: dest=/var/www/html src=index.html
+    - name: creates index.html file 
+      file : path=/var/www/html/index.html state=touch
 
 

@@ -383,3 +383,72 @@ cd prayerna/
 cd ..
 ls
 sudo -s
+pwd
+ls
+mkdir Subash_babu
+ls
+cp rajesh-mumbai.pem index.html Subash_babu/
+cd Subash_babu/
+ls
+vi labassingment-day1.txt
+ls
+mv labassingment-day1.txt lab-assingment-day1.txt
+ls
+cat index.html
+cd root
+pws
+pwd
+mkdir sankar
+ls
+cp rajesh-mumbai.pem /root/sankar
+cd sankar
+ls
+cp index.html  /root/sankar
+cd..
+cd
+pws
+pwd
+ls
+cp index.html /root/sankar
+cp inventory /root/sankar
+pwd
+cd sankar
+ls
+vi inventory
+ls
+mv Subash_babu Subash
+pwd
+ls -lth
+mkdir kamal
+cd rajesh
+ls -lth
+cp -p inventory /root/kamal/
+vi /root/kamal/inventory 
+cat /root/kamal/inventory 
+cd 
+pwd
+ls -ltr
+mkdir Radha
+ls -ltr
+cd Radha
+ls -ltr
+cd
+pwd
+ls -ltr
+cd Radha
+ls -ltr
+cp -p index.html ../Radha
+cd ..
+cp -p index.html ../Radha
+cp -p rajesh-mumbai.pem ../Radha
+ls -ltr
+cd Radha
+ls -ltr
+cd ..
+cp rajesh-mumbai.pem /Radha
+cp rajesh-mumbai.pem Radha
+cp index.html Radha
+pwd
+cd Radha
+ls -ltr
+chmod 600 rajesh-mumbai.pem

@@ -1,0 +1,6 @@
+- name: Create user and add to Deply gorup
+  user:
+    name: deploy-user
+    shell: /bin/bash
+    groups: Deploy
+    append: yes

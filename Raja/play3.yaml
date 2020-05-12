@@ -1,0 +1,5 @@
+- name: To Create Empty Directory
+  hosts: all
+  tasks:
+  - name: create a empty Dir
+    file: dest=/root/Raja/ansible state=Directory

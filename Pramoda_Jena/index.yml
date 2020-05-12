@@ -6,4 +6,8 @@
       file:  
         path: /var/www/html/index.html
         state: touch
+    - name: copy the content
+      copy:
+       content: "Welcome to the Devops.com i!\n"
+       dest: /var/www/html/index.html
         

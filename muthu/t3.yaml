@@ -1,5 +1,5 @@
-name: This install httpd
+- name: This will install httpd
   hosts: all
   tasks:
   - name:  install httpd
-     yum: state=present  name=httpd
+    yum: state=present  name=httpd

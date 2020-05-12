@@ -1,0 +1,7 @@
+- name: This creates a group deploy
+  hosts: db
+  tasks:
+  - name: create group deploy
+    group: name=deploy
+  - name: create user deploy-user in deploy group
+    user: name=deploy-user shell=/bin/bash groups=deploy append=yes

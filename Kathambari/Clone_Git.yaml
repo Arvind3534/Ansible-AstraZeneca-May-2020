@@ -1,0 +1,8 @@
+- name: Program 8
+  hosts: all
+  tasks:	
+    - name: Clone Git
+      git: dest=/var/www/html/git/ repo=https://github.com/scmgalaxy/ansible-role-template
+    - name: Ansible debug print.
+      debug:
+        msg: "Git cloned"	
