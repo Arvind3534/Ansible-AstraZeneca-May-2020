@@ -14,9 +14,10 @@
     debug:
       msg: "this is test {{ myname }}"
   - name: Run a script with arguments (using 'cmd' parameter)
-    shell: "ls -ld /etc/security"
+    script:
+      cmd: script.sh
       register: output
-  - debug: var=output
+  - debug: var=output.stdout_lines
     when: (ansible_os_family == "RedHat") or
           (ansible_os_family == "Ubuntu")
 

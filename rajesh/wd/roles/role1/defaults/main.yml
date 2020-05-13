@@ -1,0 +1,8 @@
+---
+# defaults file for role1
+
+    myname: "rajesh kumar in ext file in default"
+    package: "httpd"
+    service: "httpd"
+    age: 26
+
