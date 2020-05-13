@@ -1,0 +1,243 @@
+ACS
+13.234.78.93
+
+ARS
+15.206.145.59
+13.127.85.44
+===================================================================
+Inventory Vars - Deep Dive - group_vars and host_vars
+=====================================
+
+[web]
+13.234.78.93 myname="rajesh kumar in 93"  
+15.206.145.59 myname="rajesh kumar in 59"    
+
+[db]
+13.127.85.44
+
+[gog:children]
+web
+db
+
+[gog:vars]
+myname="rajesh kumar in inventory"
+package="httpd"
+service="httpd"
+ansible_user=ec2-user
+ansible_ssh_private_key_file=rajesh-mumbai.pem
+ansible_become=yes
+
+
+├── group_vars
+│   ├── all
+│   └── gog
+├── host_vars
+│   └── 15.206.145.59
+
+
+Templates
+====================================
+How template work is being done in Python?
+- jinja 
+
+Template file - .j2
+----------------------------------------------
+
+Step 1 - Put all vars in file which you want to inter.
+Step 2 - postfix with .j2 ext,
+Step 3 - Use module name called template
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  tasks:
+  - name: Install the httpd apps
+    yum: name=httpd state=installed
+  - name: start the httpd service
+    service: name=httpd state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test {{ myname }}"
+  - name: Template a file to /etc/files.conf
+    template:
+      src: index.html.j2
+      dest: /var/www/html/index.html
+
+
+Handlers
+====================================
+------------------
+- deploy
+	index.html --> httpd restart no.
+	httpd.config --> httpd restart  yes
+- restart
+------------------- 
+
+index.html ----> 5 times a day
+httpd.config ----> 5 times in a year
+
+Solution - Handlers
+What is Handlers?
+	Its a task
+	BUT
+	execute only and only whene 
+			- its get called by "tasks" module and
+			- calling module has to have a changes.
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  tasks:
+  - name: Install the httpd apps
+    yum: name=httpd state=installed
+  - name: start the httpd service
+    service: name=httpd state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+    notify:
+      - Restart Apache
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test {{ myname }}"
+
+  handlers:
+     - name: Restart Apache
+       service: name=httpd state=restarted
+
+
+
+File
+=====================================
+script  vs shell  vs command 
+
+
+script – Runs a local script on a remote node after transferring it
+shell – Execute shell commands on targets
+command – Execute commands on targets
+
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  tasks:
+  - name: Install the httpd apps
+    yum: name=httpd state=installed
+  - name: start the httpd service
+    service: name=httpd state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+    notify:
+      - Restart Apache
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test {{ myname }}"
+  - name: Run a script with arguments (using 'cmd' parameter)
+    script:
+      cmd: script.sh
+
+  handlers:
+     - name: Restart Apache
+       service: name=httpd state=restarted
+
+=============Conditioning===================================
+https://www.devopsschool.com/tutorial/ansible/ansible-conditional-programming-playbooks.html
+
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  tasks:
+  - name: Install the httpd apps
+    yum: name=httpd state=installed
+  - name: start the httpd service
+    service: name=httpd state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+    notify:
+      - Restart Apache
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test {{ myname }}"
+  - name: Run a script with arguments (using 'cmd' parameter)
+    script:
+      cmd: script.sh
+    when: ansible_os_family == "Debian"
+
+  handlers:
+     - name: Restart Apache
+       service: name=httpd state=restarted
+
+
+=============Looping===================================
+https://www.devopsschool.com/tutorial/ansible/ansible-looping-programming-playbooks.html
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  tasks:
+  - name: Install the httpd apps
+    yum: pkg={{ item }} state=installed
+    with_items:
+      - git
+      - httpd
+      - ntp    
+  - name: start the httpd service
+    service: name=httpd state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+    notify:
+      - Restart Apache
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test {{ myname }}"
+  - name: Run a script with arguments (using 'cmd' parameter)
+    script:
+      cmd: script.sh
+    when: ansible_os_family == "Debian"
+
+  handlers:
+     - name: Restart Apache
+       service: name=httpd state=restarted
+
+
+
+Ravi			13.233.255.192
+Subash			15.206.174.200		
+Prayerna Bhat		13.233.115.181
+Azhar Md Ali		13.232.129.79
+Radha Thirunavukkarasu	13.126.255.119
+Manickam Kamalakkannan	13.235.91.179
+Priya Kesavan		35.154.79.133
+Kathambari		13.235.86.16
+Muthukumaran Loganathan	35.154.38.205
+Pramoda Kumar Jena	13.235.68.232
+Rajakumar Dharmalingam	13.235.83.44	
+Sathyaprakash		13.126.220.247
+Sankar S		13.127.38.15
+Nirmala Dhashnamurthy	13.126.32.63
+Hinduja sivaji		13.127.111.115
+Priyanka Ashokan	13.127.85.44
+
+
+https://www.devopsschool.com/blog/ansible-variable-lab-excercise-part-2/
+https://www.devopsschool.com/blog/ansible-playbook-lab-excercise-part-3/
+https://www.devopsschool.com/blog/ansible-variable-lab-excercise-part-1/
+
+
+ROle
+=====================================
+
+
+
