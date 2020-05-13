@@ -1,0 +1,6 @@
+- name: This is for debug
+  hosts: all
+  tasks:
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is second.yaml file from {{ myname }}"

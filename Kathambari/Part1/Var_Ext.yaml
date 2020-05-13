@@ -1,0 +1,4 @@
+vars:
+  myname: "Kathambari in External File"
+  package: "httpd"
+  service: "httpd"

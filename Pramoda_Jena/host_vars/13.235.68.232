@@ -1,0 +1,3 @@
+package: "httpd"
+service: "httpd"
+myname: "pramoda Kumar in host_vars"

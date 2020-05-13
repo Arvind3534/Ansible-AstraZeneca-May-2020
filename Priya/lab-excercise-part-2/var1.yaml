@@ -1,0 +1,8 @@
+---
+- name: This installs and start httpd variable taken from inventroy
+  hosts: all
+  tasks:
+  - name: Install httpd package
+    yum: name={{ package }} state=installed
+  - name: start httpd service
+    service: name={{ service }} state=started

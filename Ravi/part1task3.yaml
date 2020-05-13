@@ -1,0 +1,8 @@
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  tasks:
+    - name: install the httpd apps
+      yum: name={{ package }} state=installed
+    - debug:
+         msg: "{{ myname }} got installed"  

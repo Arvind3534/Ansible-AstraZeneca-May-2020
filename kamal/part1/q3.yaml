@@ -1,0 +1,9 @@
+me: This sets a httpd webserver
+  hosts: all
+  tasks:
+  - name: Install the httpd apps
+    yum: name={{ package }} state=installed
+  - name: start the service
+    service: name={{ service }} state=started
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"

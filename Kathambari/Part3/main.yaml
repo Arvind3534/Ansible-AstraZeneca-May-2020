@@ -1,0 +1,10 @@
+---
+- name: Assignment 3
+  hosts: all
+  tasks:
+  - name: This is main.yaml
+    debug:
+      msg: "Message of main.yaml"
+  - include: second.yaml
+  - include: third.yaml
+...

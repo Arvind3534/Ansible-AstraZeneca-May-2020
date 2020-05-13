@@ -1,0 +1,5 @@
+---
+- name: to install apache ob QA and DEV env
+  hosts: all
+  tasks:
+      

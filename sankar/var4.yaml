@@ -1,0 +1,13 @@
+- name: This sets up an httpd webserver
+  hosts: all
+  vars_prompt:
+    - name: "httpd_var"
+      prompt: "Which Service Do you want to install?"
+      private: no
+  tasks:
+  - name: Install the httpd apps
+    yum: name={{ httpd_var }} state=installed
+  - name: start the httpd service
+    service: name={{ httpd_var }} state=started
+    debug:
+      msg: "{{ httpd_var }} installed successfully"

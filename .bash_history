@@ -1,830 +1,1000 @@
-exit
+ansible-playbook -i inv main.yaml
+vi main.yaml
+ansible-playbook -i inv main.yaml
+vi inv
+cat inv
+vi first.yaml
+vi first1.yaml
+ls
+vi file1.yaml
+vi file2.yaml
+ansible-playbook -i inv main.yaml
+vi inv
+ansible-playbook -i inv main.yaml
+ls
+cd
+ls
+cd Raja
+ls
+cd
+cd Azhar
+ls
+cat task1.yaml
+cat task3.yaml
+cat task5.yaml
+cat master.yaml
+ls
+cat task8.yaml
+cat task2.yaml
+cat task4.yaml
+cat task7.yaml
+cd
+ls
+cd muthu
+cd Azhar
+cd
+cd Azhar
 ls
 cat inventory 
-vi inventory 
-vi inventory 
-ansible web -i inventory -m yum -a"state=present  name=httpd"
-vi inventory 
-ansible all -i inventory -m yum -a"state=present  name=httpd"
-vi inventory 
-cd /etc/ansible
-ls
-cat hosts
-vi inventory
-wget https://www.devopsschool.com/notes/docker/2019/rajesh-mumbai.pem
-ansible web -i inventory -m yum -a"state=present  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-chmod 600 rajesh-mumbai.pem
-ansible web -i inventory -m yum -a"state=present  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible web -i inventory -m copy -a"dest=/var/www/html src=index.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible web -i inventory -m file -a"path=/tmp/ansible state=directory" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-mkdir hplaybook
-cd hplaybook
-ls
-cat index.html
-cat >>index.html
-cat index.html
-echo index.html
-echo >>index.html
-pwd
-touch index.html
-cat > index.html
-cat  index.html
-ansible web -i inventory -m copy -a"dest=/var/www/html src=index.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-cd ..
-ls
-mv inventory /etc/ansible/hplaybook
-cd /etc/ansible/hplaybook
-ls
-ansible web -i inventory -m copy -a"dest=/var/www/html src=index.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-cd /var/tmp
+cd
+cd muthu
 vi inv
-ansible web,db -i inventory -m yum -a"state=present  name=nginx" 
-ansible web,db -i inv -m yum -a"state=present  name=nginx" 
-cd 
+vi t1.yaml
+vi t2.yaml
+vi main.yaml
+ansible-playbook -i inv main.yaml
+vi main.yaml
+cat main.yaml
+ansible-playbook -i inv main.yaml
+vi main.yaml
+cat main.yaml
+vi t1.yaml
+vi t2.yaml
+ansible-playbook -i inv main.yaml
+vi t1.yaml
+vi t2.yaml
+ansible-playbook -i inv main.yaml
 ls
-cp rajesh-mumbai.pem /var/tmp/
-cd -
+vi inv
+wget https://devopsschoo.com/notes/docker/2019/rajesh-mumbai.pem
+wget https://devopsschool.com/notes/docker/2019/rajesh-mumbai.pem
 ls
-ansible web,db -i inv -m yum -a"state=present  name=nginx" 
-ssh 13.235.243.154
-ssh 13.235.243.154 -l ec2-user -i rajesh-mumbai.pem 
-ansible web,db -i inv -m yum -a"state=present  name=nginx" 
-ansible db -i inv -m yum -a"state=present  name=nginx" 
-ansible db -i inv -m service -a"name=nginx state=started"
-ssh 13.235.243.154 -l ec2-user -i rajesh-mumbai.pem 
-ansible db -i inv -m service -a"name=nginx state=restarted"
-ssh 13.235.243.154 -l ec2-user -i rajesh-mumbai.pem 
-ansible db -i inv -m service -a"name=nginx state=stopped"
-ansible db -i inv -m yum -a"name=nginx state=absent"
-ansible db -i inv -m yum -a"name=httpd state=present"
-ansible db -i inv -m service -a"name=httpd state=started"
-ssh 13.235.243.154 -l ec2-user -i rajesh-mumbai.pem 
-cat inv 
-ansible all -i 13.235.243.154, -m yum -a"state=absent  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible all -i 13.235.243.154, -m yum -a"state=present  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible all -i 13.235.243.154, -m service -a"state=started  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
+ansible-playbook -i inv main.yaml
+vi t3.yaml
+vi main.yaml
+ansible-playbook -i inv main.yaml
+cd
+cd muthu
+ls
+cat t3.yaml
+vi t3.yaml
+ansible-playbook -i inv main.yaml
+vi t3.yaml
+ansible-playbook -i inv main.yaml
+cat inv
+ls
+cat user.yaml
+vi user.yaml
+vi t7.yaml
+ls
+ls -ltr
+cd Azhar
+ls -ltr
+cat var3.yaml
+cat var-ext.yaml
+ansible-playbook -i inventory var3.yaml -e "@var-ext.yaml"
+cd ..
+cd Radha
+ls -ltr
 pwd
-cd /var/www/html
-ls -ltr
-cd ..
-ls -ltr
-cd ..
-ls -ltr
-pwd
-cd ..
-ls -ltr
-cd var
-cd www
-ls -ltr
-mkdir radha
-ls -ltr
-cd radha
-ls -ltr
-vi inventory
-cat inventory
-vi inventory
-cat inventory
-ansible web -i inventory -m yum -a"state=present  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
+ls
+cd kamal/
+ls
+ls
+ls
+ls
+ls
+cd priyanka
+ls
+cd
+history
+vi /etc/ssh/sshd_config 
+clear
+passwd ec2-user
+systemctl restart sshd
+clear
+clear
+ls
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+ sudo yum install wget -y
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo rpm -i epel-release-latest-7.noarch.rpm
+sudo yum install ansible -y
+clear
+ls
+cd
+ls
+rm -rf anaconda-ks.cfg original-ks.cfg 
+ls
 wget https://www.devopsschool.com/notes/docker/2019/rajesh-mumbai.pem
-chmod 600 rajesh-mumbai.pem
+clear
+ls
+chmod 600 rajesh-mumbai.pem 
+clear
+ls
+ls
+vi inventory
+clear
 ansible web -i inventory -m yum -a"state=present  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ls -ltr
+vi /etc/ansible/ansible.cfg 
+ansible web -i inventory -m yum -a"state=present  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
+ansible web -i inventory -m copy -a"dest=/var/www/html src=index.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
 vi index.html
 ansible web -i inventory -m copy -a"dest=/var/www/html src=index.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
 ansible web -i inventory -m service -a"name=httpd state=started" -u=ec2-user --key-file=rajesh-mumbai.pem -b
 ansible web -i inventory -m file -a"path=/tmp/ansible state=directory" -u=ec2-user --key-file=rajesh-mumbai.pem -b
 ansible web -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible web -i inventory -m file -a"path=/tmp/radha/ansible state=directory" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible web -i inventory -m file -a"path=/tmp/radha/ansible/devopsschoo.txt state=touch" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ls -ltr
-cat inventory
+clear
+ls
+ansible all -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" -u=ec2-user --key-file=rajesh-mumbai.pem -b
+clear
+ls
+clear
+l
+ls
 vi inventory
-cat inventory
-ansible web -i inventory -m yum -a"state=present  name=httpd"
-vi index.html
-cat index.html
-ansible web -i inventory -m copy -a"dest=/var/www/html src=index.html"
-ansible web -i inventory -m service -a"name=httpd state=started"
-owd
-pwd
-ansible web -i inventory -m file -a"path=/tmp/radha/ansible state=directory"
-ansible web -i inventory -m file -a"path=/tmp/radha/ansible/devopsschoo.txt state=touch"
+ansible web -i inventory -m yum -a"state=present  name=httpd" 
+clear
+ansible web -i inventory -m yum -a"state=present  name=httpd" 
+clear
+vi inventory 
+ansible web -i inventory -m yum -a"state=present  name=httpd" 
+clear
+vi inventory 
+ansible web -i inventory -m yum -a"state=present  name=httpd" 
+clear
+ls
+vi index.html 
+vi index.html 
+clear
+ls
+ansible web,db -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+clear
+vi inventory 
+ansible web,db -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+clear
+vi inventory 
+ansible web,db -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+vi inventory 
+clear
+vi inventory 
+ansible web,db -i inventory -m copy -a"dest=/var/www/html src=index.html" 
+clear
+ls
 ansible web,db -i inventory -m yum -a"state=present  name=httpd"
-vi inventory
- ansible web,db -i inventory -m yum -a"state=present  name=httpd"
-cat inventory
-ansible web,db -i inventory -m copy -a"dest=/var/www/html src=index.html"
-vi inventory
-cat inventory
-ansible gog -i inventory -m yum -a"state=present  name=httpd"
-ansible gog -i inventory -m services -a"state=started name=httpd"
-ansible gog -i inventory -m service -a"state=started name=httpd"
-ansible gog -i inventory -m yum -a"state=present  name=git"
-ls
-cat inventory
-vi inventory
-ls
-ls
-ls
-ls
-which httpd
-cat index.html
-ls
-vi inv
-ls
-cat inv
-ls
-vi ind.html
-cat ind.html
 clear
-which httpd
-ansible db -i inventory -m copy -a"dest=/var/www/html src=index.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible db -i inventory -m copy -a"dest=/var/www/html src=ind.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible db -i inventory -m yum -a"state=present  name=httpd" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible db -i inventory -m service -a"name=httpd state=started" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible localhost -m service -a 'name=httpd state=started enabled=yes' --become
-ansible db -i inventory -m service -a"name=httpd state=started" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible db -i inv -m service -a"name=httpd state=started" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible db -i inv -m copy -a"dest=/var/www/html src=ind.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible db -i inv -m copy -a"dest=/var/www/ind.html src=ind.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible db -i inv -m service -a"name=httpd state=started" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible web -i inv -m file -a"path=/tmp/ansible state=directory" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible db -i inv -m file -a"path=/tmp/ansible state=directory" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ansible db -i inv -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ls
-which httpd
-ls
-ansible db -i inv -m copy -a"dest=/var/www/ind.html src=ind.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-ls
-ls
-ansible db -i inv -m copy -a"dest=/var/www/ind.html src=ind.html" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-cd /etc/ansible
-ls
-cd hplaybook
-ls
-cd ..
-mv rajesh-mumbai.pem hplaybook/
-cd hplaybook
-ls
-ls -ld rajesh-mumbai.pem
-chmod 600 rajesh-mumbai.pem
-ansible web -i inventory -m file -a"path=/tmp/ansible state=directory" -u=ec2-user --key-file=rajesh-mumbai.pem -b
-id raju
-useradd raju
-passwd raju
-vi inventory
-ansible web -i inventory -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch"
-cat inventory
 vi inventory 
-ls
-ls
-exit
-ls
+clear
+ansible web,db -i inventory -m yum -a"state=present  name=httpd"
+clear
+ansible web,db -i inventory -m yum -a"state=present  name=httpd"
+clear
 vi inventory 
+ansible web,db -i inventory -m yum -a"state=present  name=httpd"
+clear
 vi inventory 
-ansible web -i inventory -m yum -a"state=present  name=httpd"
-vi inventory
-ls
-ls -l
-exit
-ls -l
-vi inv
-ls
-cd..
-cd ..
-ls
-cd ..
-ls
-cd etc
-ls
-cd usr
-cd ..
-cd usr
-ls
-cd ..
-pwd
-cd root/
-s
-ls
-mkdir Raja
-ls
-cd raja
-cd raja
-cd Raja
-ls -lrt
-pwd
-cd /
-vi inventory
-touch inventory
-vi inventory
 clear
 ls
-ansible-playbook -i inventory group.yml
-vi group.yml
-ls
-vi inventory
-ansible-playbook -i inventory group.yml
-ansible -m -i inventory ping all
-ansible -i inventory -m ping all
-vi inventory
-ansible -i inventory -m ping all
-cat inventory 
-ls
-mv group.yml httpd.yml
-ls
-ansible-playbook -i inventory httpd.yml
-ansible-playbook -i inventory httpd.yml
-ansible-playbook -i inventory httpd.yml
-history
-ls
+clear
+vi inventory 
+ansible web,db -i inventory -m yum -a"state=present  name=httpd"
+clear
+clear
+vi inventory 
+vi inventory 
+gog 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+vi inventory 
+clear
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+vi inventory 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+clear
+vi inventory 
+ansible gog -i inventory -m yum -a"state=present  name=httpd" 
+clear
 cd /etc/ansible/
 ls
-cd hplaybook
-ls
-mv rajesh-mumbai.pem /hinduja
-cd /hinduja
-cd hinduja
-cd /
-cd hinduja
-ls
-cd 
-ls
-cd hinduja
-ls -ld hinduja
-cd Pramoda_Jena
-ls
-cat inventory
-cat group.yml
-cd ..
-pwd
-cd hinduja
-ls -ltr
-ls -ltr
-mkdir hinduja
-history
-ls
-cd hinduja
-ls
-mv rajesh-mumbai.pem .
-ls
-vi inventory
-grep raj
-cd /
-ls
-cd ..
-ls
-ls
-cd ..
-ls -ltr
-ls -ltr
-cd ..
-cd ..
-ls -ltr
-cd ..
-ls -ltr
-cd raju
-rm hinduja
-ls -ltr
-ls -lth
-cd kamal
-ls
-exit
-pwd 
-ls -ll
 clear
-pwd 
-ls -ll
-mkdir pramod
-ls -ll
-cp index.html inventory  pramod
-ls -ll pramod 
 clear
-cd pramod/
-pwd 
-ls -ll
-vi inventory 
 ls
-cd ec2-user/
-ls
-cat inv
-cat ind.html 
-cd priya/
-cd Priya/
-ls
-cat inventory 
-cp create_group.yaml ../prayerna/
-35.154.57.155   ansible_user=ec2-user ansible_ssh_pass=devops123 ansible_become=yes
-#13.234.116.49  ansible_user=raju ansible_ssh_pass=raju123 ansible_become_user=ec2-user ansible_become_pass=raju123 ansible_become_method=yes
-[db]
-13.235.243.154
-[gog:children]
-web
-db
-[db:vars]
-ansible_user=ec2-user
-ansible_ssh_private_key_file=rajesh-mumbai.pem
-ansible_become=yes
-[app]
-35.154.57.155
-13.234.116.49
-ls
-cat create_group.yaml
-vi create_group.yaml 
-cat create_group.yaml
-ls
-cat create_group.yaml
-cat install_git.yaml 
-ls
-cat index.html 
-ls
-cat inventory
-ls
-cat create_index.yaml 
-ls
-cat install_httpd.yaml 
-ls
-cat start_enable_httpd.yaml 
-ls
-cat second.html 
-cat create_index.yaml 
-cat create_user.yaml 
-ls
-cat clone_git.yaml 
-cd ..
-ls
-cd priyanka/
-ls
-cd ..
-hinduja/
-ls
-ls
-cp inventory Prayerna/
-ls
-cp rajesh-mumbai.pem Prayerna/
-cd priyanka/
-ls
-cd ..
-cd prayerna
-cd Prayerna/
-ls
-cat inventory 
-vi inventory 
-cd ..
-ls
-cd Priya/
-ls
-cat inventory 
-cat create_user.yaml 
-cat create_group.yaml 
-ls 
-cd ..
-ls
-cd prayerna/
-cd ..
-ls
-sudo -s
-pwd
-ls
-mkdir Subash_babu
-ls
-cp rajesh-mumbai.pem index.html Subash_babu/
-cd Subash_babu/
-ls
-vi labassingment-day1.txt
-ls
-mv labassingment-day1.txt lab-assingment-day1.txt
-ls
-cat index.html
-cd root
-pws
-pwd
-mkdir sankar
-ls
-cp rajesh-mumbai.pem /root/sankar
-cd sankar
-ls
-cp index.html  /root/sankar
-cd..
 cd
-pws
-pwd
 ls
-cp index.html /root/sankar
-cp inventory /root/sankar
-pwd
-cd sankar
+clear
 ls
-vi inventory
-ls
-mv Subash_babu Subash
 pwd
-ls -lth
-mkdir kamal
+cd
+ls
+pwd
+mkdir rajesh
+ls
+clear
+ls
+cp rajesh-mumbai.pem rajesh
+clear
+ls
+cp index.html rajesh
+ls
+clear
+ls
 cd rajesh
-ls -lth
-cp -p inventory /root/kamal/
-vi /root/kamal/inventory 
-cat /root/kamal/inventory 
-cd 
-pwd
-ls -ltr
-mkdir Radha
-ls -ltr
-cd Radha
-ls -ltr
-cd
-pwd
-ls -ltr
-cd Radha
-ls -ltr
-cp -p index.html ../Radha
-cd ..
-cp -p index.html ../Radha
-cp -p rajesh-mumbai.pem ../Radha
-ls -ltr
-cd Radha
-ls -ltr
-cd ..
-cp rajesh-mumbai.pem /Radha
-cp rajesh-mumbai.pem Radha
-cp index.html Radha
-pwd
-cd Radha
-ls -ltr
-chmod 600 rajesh-mumbai.pem
-cd 
-ls -ltr
-cat inventory
-cd Radha
+ls
+clear
+ls
 vi inventory
-cat inventory
-ls -ltr
-cd /
 ls
-cd root
+clear
 ls
-cd sankar
-pwd
+web.yaml
+clear
+ls
+clear
+clear
+ls
+vi web.yaml
+clear
+ls
+ls
+ls
+clear
+ls
+ansible-playbook -i inventory web.yaml
+clear
+ls
 vi 1.yaml
-ls
 vi 2.yaml
+vi master.yaml
+clear
+ls
+clear
+ansible-playbook -i inventory master
+ansible-playbook -i inventory master.yaml 
+clear
+ls
+vi taskmain.yaml
 vi 3.yaml
 vi 4.yaml
 vi 5.yaml
-vi deploy.yaml
+clear
 ls
+clear
+clear
+ls
+ansible-playbook -i inventory taskmain.yaml
+clear
+ls
+clear
+cd ..
+ls
+pwd
+yum install git -y
+ls
+clear
+ls
+pwd
+git clone https://github.com/devopsschool-training-notes/Ansible-AstraZeneca-May-2020
+clear
+ls
+cd Ansible-AstraZeneca-May-2020
+ls
+mv * ..
+mv .git/ ..
+clear
+ls
+cd ..
+ls
+rm -rf Ansible-AstraZeneca-May-2020
+clear
+git status
+git config user.name "Rajesh Kumar"
+clear
+git config user.email "devops@rajeshkumar.xyz"
+git add .
+git commit -m"ading"
+clea
+clea
+clear
+clear
+git push origin masetr
+git push origin master
+git push origin master
+clear
+ls
+mkdir raju
+cd raju/
+clear
+ls
+pwd
+cd ..
+ls
+ls
+ls
+ls
+ls -1
+git add .
+git commit -m"ading"
+git push origin master
+git push origin master
+git pull origin master
+git push origin master
+git push origin master
+pwd
+clear
+pwd
+ls
+git add .
+pwd
+ls
+ls -la
+clear
+ls
+git add .
+git status
+clear
+'git add --all .
+'git add --all 
+git add --all .
+git commit -m"add"
+cleat
+clear
+git push origin master
+git push origin master
+clear
+ls
+cd raj
+cd rajesh
+ls
+clear
+;s
+clear
+ls
+more web.yaml
+clear
+ls
+vi var1.yaml
+clear
+ansible-playbook -i inventory var1.yaml
+clear
+ls
+vi var-ext.yaml
+vi var2.yaml
+ansible-playbook -i inventory var2.yaml
+clear
+ls
+vi inventory 
+ansible-playbook -i inventory var2.yaml
+vi inventory 
+vi inventory 
+ansible-playbook -i inventory var2.yaml
+clear
+ls
+vi inventory 
+cp var2.yaml var3.yaml
+vi var3.yaml 
+vi var3.yaml 
+clear
+ansible-playbook -i inventory var3.yaml
+clear
+vi inventory 
+clear
+ansible-playbook -i inventory var3.yaml
+clear
+ansible -help
+clear
+ls
+clear
+ls
+vi var4.yaml
+ansible-playbook -i inventory var4.yaml
+cler
+clear
+vi var4.yaml
+ansible-playbook -i inventory var4.yaml
+clear
+ls
+more var-ext.yaml
+vi var-ext.yaml
+ls
+vi var5.yaml
+clear
+ansible-playbook -i inventory var5.yaml
+vi var5.yaml
+clear
+ansible-playbook -i inventory var5.yaml
+clear
+vi var5.yaml
+ansible-playbook -i inventory var5.yaml
+clear
+ansible -help
+clear
+ls
+clear
+ansible-playbook -i inventory var5.yaml -e "@var-ext.yaml"
+clear
+ls
+vi var5.yaml
+more var-ext.yaml
+vi var-ext.yaml
+ansible-playbook -i inventory var5.yaml -e "@var-ext.yaml"
+clear
+ansible-playbook -i inventory var5.yaml -e age=334
+history
+clear
+ls
+ansible --version
+cd /usr/share/ansible/plugins/modules
+ls
+ls
+cd /usr/lib/python2.7/site-packages/ansible
+ls
+clear
+ls
+cd modules
+ls
+cd files
+ls
+cd ..
+ls
+find . -nam copy(
+find . -nam copy*
+find . -name copy*
+clear
+find . -name copy*
+clear
+clear
+ls
+cd
+ls
+clear
+ls
+ansible localhost -m setup
+clear
+ansible localhost -m setup | grep -i os
+history
+clear
+ls
+git pull origin master
+git add .;git commit -m"adding";git push origin master
+clear
+git add .
+git add --all .
+git commit -m"ading"
+clear
+git push origin master
+git status
+ls -lrt
+mkdir Nirmala 
+ cd Azhar
+ls -lrt
+cp -p rajesh-mumbai.pem ../Nirmala
+cp -p index.html ../Nirmala
+cp -p inventory  ../Nirmala
+cd ../Nirmala
+ls -lrht
+cat index.html
+cat inventory
+vi  inventory 
+vi task1.yaml
+cat task1.yaml
+ansible-playbook -i inventory task1.yaml
+ ansible localhost -m group -a"local=yes name=deploy"
+clear
+ls
+cd subash
+ls -lth
+ip a
+clear
+cd /root/sankar
+vi var2.yaml
 vi inventory
-ls -lr
-cd Radha
-ls -tr
+cd subahs
+cd subash
+ls -lth
+more inventory
+vi /root/kamal/inventory 
+cd rajesh
 ls -ltr
+cat inventory
+cd ..
+cd Radha
+ls -ltr
+cat inventory
+vi inventory
+cat inventory
+vi pb.yaml
+ansible-playbook -i inventory pb.yaml
+cat pb.yaml
+vi inventory
+ansible-playbook -i inventory pb.yaml
+cd ..
+cd rajesh
+ls -ltr
+ansible-playbook -i inventory var1.yaml
+ansible-playbook -i inventory var2.yaml
+ansible-playbook -i inventory var3.yaml
+cat var3.yaml
+cat var2.yaml
+cd ..
+cd Radha
+vi inv.yaml
+ansible-playbook -i inventory inv.yaml
+cd ..
+cd rajesh
+ls -ltr
+pwd
+cat var-ext.yaml
+cd ..
+cd Radha
+ls -ltr
+cat inv.yaml
+cat inventory
+vi inv.yaml
+ansible-playbook -i inventory inv.yaml
+ls -ltr
+cat pb.yaml
+vi pb.yaml
+ansible-playbook -i inventory pb.yaml
+vi extvar.yaml
+vi ext.yaml
+ansible-playbook -i inventory ext.yaml
+ls -ltr
+cat extvar.yaml
+cat ext.yaml
+ansible-playbook -i inventory ext.yaml
+cd ..
+cd rajesh
+cat var5.yaml
+cd ..
+cd Radha
+ls -ltr
+ansible-playbook -i inventory ext.yaml -e "@extvar.yaml"
+vi cmd.yaml
+ansible-playbook -i inventory cmd.yaml -e package=httpd
+cat cmd.yaml
+cd ..
+cd rajesh
+cat var2.yaml
+cd ..
+cd Radha
+ls -ltr
+vi ext.yaml
+ansible-playbook -i inventory ext.yaml -e "@extvar.yaml"
+vi ext.yaml
+ansible-playbook -i inventory ext.yaml -e "@extvar.yaml"
+cat ext.yaml
+cat extvar.yaml
+vi cmd.yaml
+vi extvar.yaml
+ansible-playbook -i inventory ext.yaml -e "@extvar.yaml"
+mkdir sathya
+cp index.html /sathya
+cp index.html sathya
+cd sathya
+chmod 600 rajesh-mumbai.pem
+vi inventory
+pwd
+cd ..
+ls -ltr
+cat inventory
+cd sathya
+vi inventory
+ls -ltr
+cd ..
+cp rajesh-mumbai.pem sathya
+cd sthya
+ls -ltr
+cd  sathya
+ls -ltr
+chmod 600 rajesh-mumbai.pem
 vi deploy.yaml
 cat deploy.yaml
 vi httpd.yaml
 cat httpd.yaml
-vi test_httpd.yaml
-cat test_httpd.yaml
+vi test_httpd_service.yaml
+vi install_git.yaml
+ls -ltr
+vi - name: This is to install git,wget
+  hosts: db
+  tasks:
+  - name: install git
+    yum: state=present  name=git
+  - name: install wget
+    yum: state=present  name=wget 
+vi git.yaml
+vi master.yaml
+ls -ltr
+cat master.yaml
 vi master.yaml
 ansible-playbook -i inventory master.yaml
-vi test_httpd.yaml
-ansible-playbook -i inventory master.yaml
-cd kamal/
-ls
-vi Master.yaml
-vi 2.yaml
-vi 3.yaml
-vi 4.yaml
-vi 5.yaml
-vi 6.yaml
-vi 7.yaml
-vi 8.yaml
-vi 9.yaml
-vi 10.yaml
-cd /root/rajesh/5.yaml
-more /root/rajesh/5.yaml 
-ls -lth
-cp -p /root/rajesh/rajesh-mumbai.pem .
-cp -p /root/rajesh/index.html .
-vi index.html 
-cp index.html second.html
-vi second.html 
-vi Master.yaml 
+ls -ltr
+cat git.yaml
 clear
-ansibl-playbook -i inventory Master.yaml
-ansible-playbook -i inventory Master.yaml
-vi 7.yaml 
-ansible-playbook -i inventory Master.yaml
-cat 3.yaml 
-vi 3.yaml 
-vi 7.yaml 
-ansible-playbook -i inventory Master.yaml
-vi 3.yaml 
-vi 7.yaml 
-ansible-playbook -i inventory Master.yaml
-cat 3.yaml 
-cat 7.yaml 
-vi 7.yaml 
-ansible-playbook -i inventory Master.yaml
-cp 3.yaml 7.yaml 
-vi 7.yaml 
-ansible-playbook -i inventory Master.yaml
-more 7.yaml 
-vi 7.yaml 
-more 7.yaml 
-ansible-playbook -i inventory Master.yaml
-more 8.yaml 
-vi Master.yaml 
-ansible-playbook -i inventory Master.yaml
-vi Master.yaml 
-vi 10.yaml 
-cd root/sankar
-vi inventory
-ls -ltr
-cd /home
-ls -ltr
-history
-cd ..
-ls -ltr
-cd Pramoda_Jena
-cd sub
-ls
-mv Subash subash
+ls -l
 cd subash/
 ls
-vi group.yaml
-vi user.yaml
-installhttp.yaml
-vi installhttp.yaml
-vi enable.yaml
-vi copy.yaml
-vi installgit.yaml
-vi clonegit.yaml
-vi reboot.yaml
+cat *
+clear
 ls
-vi inventory
-ansible-playbook all -i inventory group.yaml
-ansible-playbook -i inventory group.yaml
-vi inventory 
-ssh 13.235.243.154
-ls
-vi inventory
-chmod 600 rajesh-mumbai.pem 
-ansible-playbook -i inventory group.yaml
-ping 13.235.243.154
-ansible-playbook -i inventory group.yaml
-vi inventory
-ansible-playbook -i inventory group.yaml
-ls
-ansible-playbook -i inventory user.yaml
-ansible-playbook -i inventory installhttp.yaml
-ansible-playbook -i inventory enable.yaml
-ansible-playbook -i inventory copy.yaml
-ansible-playbook -i inventory installgit.yaml 
-vi installgit.yaml
-ansible-playbook -i inventory installgit.yaml 
-vi installgit.yaml
-ansible-playbook -i inventory installgit.yaml 
-vi clonegit.yaml 
-ansible-playbook -i inventory clonegit.yaml 
-vi clonegit.yaml 
-ansible-playbook -i inventory clonegit.yaml 
-vi clonegit.yaml 
-ansible-playbook -i inventory clonegit.yaml 
-vi clonegit.yaml 
-ansible-playbook -i inventory clonegit.yaml 
-ls
-ls -alrt
-mv user.yaml 2user.yaml
-mv group.yaml 1group.yaml
-mv installhttp.yaml 3installhttp.yaml
-mv enable.yaml 4enable.yaml
-mv copy.yaml 5copy.yaml
-mv reboot.yaml 6reboot.yaml
-mv installgit.yaml 7installgit.yaml
-mv clonegit.yaml 8clonegit.yaml
-ls -alrt
-vi master.yaml
-cat master.yaml 
-ansible-playbook -i inventory master.yaml 
-ls
-rm lab-assingment-day1.txt
-ls
-ls -alrt | wc -l
-ls
-ls | wc -l
-pwd
-cd
-- name: This sets up an httpd webserver
-  hosts: all
-  vars:
-    myname: "rajesh kumar"
-    package: "httpd"
-    service: "httpd"
-  tasks:
-  - name: Install the httpd apps
-    yum: name={{ package }} state=installed
-  - name: start the httpd service
-    service: name={{ service }} state=started
-  - name: create a empty fle
-    file: dest=/opt/test.txt state=touch
-  - name: copy a file
-    copy: dest=/var/www/html/ src="index.html"
-  - name: Ansible debug print example.
-    debug:
-      msg: "{{ myname }}"
-ansible-playbook -i inventory var1.yaml
-ls -ltr
-mkdir sathya
+more var1.yaml 
+cp var1.yaml /root/kamal/
 cd /root/kamal/
 ls
+mv var1.yaml question1.yaml
+vi question1.yaml 
+ls -lth
+cd ../subash/
+ls
+more var1.yaml 
+ls
+more var2.yaml 
+vi /root/kamal/question2.yaml
+ls -lth
+more var3.html 
+vi /root/kamal/question3.yaml
+ls
+more var3.html 
+vi /root/kamal/question4.yaml
+ls
+more var6.html 
+vi /root/kamal/q6.yaml
+vi /root/kamal/question1.yaml 
+vi /root/kamal/question2.yaml 
+ls -lth /root/kamal/
+vi /root/kamal/question3.yaml 
+vi /root/kamal/question4.yaml 
+ls -lth
+more extvar.yaml 
+vi /root/kamal/external_var.yaml
+ls -lth
+more var6.html 
+cd ../kamal/
+ls
+more q6.yaml 
+cd ../subash
+ls
+ls -lth
+cd
+ls -lrt
+cd Azhar/
+ls -lrt
+cd day3
+ls -lrt
+cd ..
+ls -lrt
+cd ..
+ls -lrt
+cd subash/
+ls -lrt
+cd variable-lab-part1
+ls -lrt
+cd group_vars
+ls -lrt
+vi all 
+vi pub 
+cd
+ls -lrt
+cd rajesh
+ls -lrt
+vi web.yaml 
+cd
+cd Kathambari/Part2/
+vi Assignment2.yaml
+vi inventory 
+vi inventory 
+ls
+tree
+more Assignment2.yaml 
+vi Assignment2.yaml 
+ansible-playbook -i inventory Assignment2.yaml 
+vi index.html 
+ansible-playbook -i inventory Assignment2.yaml 
+cp index.html index.html.j2
+vi index.html.j2
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+more index.html.j2
+ansible-playbook -i inventory Assignment4.yaml 
+more Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+more Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+vi Assignment4.yaml 
+ansible-playbook -i inventory Assignment4.yaml 
+more Assignment4.yaml 
+vi temp.yaml
+ansible-playbook -i inventory temp.yaml 
+rm temp.yaml 
+cd
+cd Kathambari/
+mkdir Part3
+tree
+cp /Part2/index.html Part3
+cp Part2/index.html Part3
+cp Part2/index.html.j2 Part3
+cp Part2/inventory Part3
+cp Part2/rajesh-mumbai.pem Part3
+cd Part3
+ls
+cd ..
+mkdir Part1
+cp Part2/index.html Part1
+cp index.html Part1
+cp index.html Part1
+cp inventory Part1
+cp rajesh-mumbai.pem Part1
+cd Part1
 more inventory 
-more 5.yaml 
-more 6.yaml 
-vi 4.yaml 
-more 5.yaml 
-vi 5.yaml 
-ansible-playbook -i inventory Master.yaml
-vi Master.yaml 
-ansible-playbook -i inventory Master.yaml
-pwd
-ls -ltr
-cd Radha
-ls -ltr
-vi git.yaml
-cat git.yaml
-vi install_git_wget.yaml
-ls -ltr
-vi master.yaml
-cat install_git_wget.yaml
-vi master.yaml
-cat master.yaml
-ansible-playbook -i inventory master.yaml
-vi master.yaml
-ansible-playbook -i inventory master.yaml
-ls -ltr
-cat inventory
-cat git.yaml
-vi git.yaml
-ansible-playbook -i inventory master.yaml
-ls -ltr
-history
-ls -ltr
-mkdir hinduja
-cd hinduja
-ls -ltr
-cat inventory
-vi httpd.yml
-ansible-playbook -i inventory httpd.yml
-ls -ltr
+vi inventory 
 cd ..
-ls -ltr
-cd Radha
+ls | grep Var
+cp Var1.yaml Part1
+cp Var2.yaml Part1
+cp Var3.yaml Part1
+cp Var6.yaml Part1
+cp Var_Ext.yaml.yaml Part1
+cp Var_Ext.yaml Part1
+cd Part1
 ls
-cp rajesh-mumbai.pem hinduja
-cd hinduja
+tree
+ansible-playbook -i inventory Var1.yaml 
+vi index.html
+ansible-playbook -i inventory Var1.yaml 
+mkdir host_vars
+mkdir group_vars
+cd host_vars/
+touch 13.235.86.16
+vi 13.235.86.16
 cd ..
-cd hinduja
-ansible-playbook -i inventory httpd.yml
+more inventory 
+cd host_vars/
+vi 13.235.86.16 
+exit
+vi inventory
+cd
 ls
-history
+cd root/
+ls
+cd Azhar/
+ls
+cd day3/
+ls
 cd ..
+cd ..
+cd Priya/
+ls
+cd lab-excercise-part-1/
+ls
+cat var1.yaml 
+cd group_vars/
+ls
+cd ..
+cd host_vars/
+ls
+cd ..
+cd ..
+cd..
+ cd ..
+cd subash/
+ls
+cd variable-lab-part
+cd variable-lab-part3
+ls
+cd ..
+cd ..
+ls
+ls
+cd Azhar/
+ls
+cd day3/
+ls
+cat handlers.yaml 
+ls
+cd host_vars/
+ls
+cat 15.206.145.59 
+cd ..
+cd group_vars/
+ls
+ls
+cat all 
+cd ..
+ls
+ cd ..
+cd ..
+cd Priya/
+ls
+cd lab-excercise-part-1/
+ls
+cd group_vars/
+ls
+cat all 
+cat gog 
+cd ....
+cd .. ..
+cd ..
+cd ..
+cd  subash/
+ls
+cd variable-lab-part3
+ls
+cd ..
+cd variable-lab-part2
+ls
+cd ..
+cd variable-lab-part1
+ls
+cd host_vars/
+ls
+cat 15.206.174.200 
+cd ..
+cd group_vars/
+ls
+cat pub 
+cd ..
+cd ..
+cd ..
+cd Azhar/
+ls
+ls
+cd day3/
+ls
+cat cond.yaml 
+ls
+cat handlers.yaml 
+ls
+ccat template.yaml 
+cat template.yaml 
+ls
+cat index.html.j2 
+cd ..
+cd ..
+ls
+cd subash/
+ls
+cd variable-lab-part1
+ls
+cd host_vars/
+ls
+cd ..
+ls
+cd ..
+cd ..
+cd priya/
+cd Priya/
+ls
+cd lab-excercise-part-1/
+ls
+cd group_vars/
+ls
+cd ..
+cd ..
+cd ..
+cd Azhar/
+ls
+cd day3/
+ls
+cat index.html2
+cat index.html.j2 
+ls
+cat file.yaml 
+ls
+cd host_vars/
+ls
+cat 15.206.145.59 
+ls
+cd ..
+ls
+cd group_vars/
+ls
+cat all
+cat gog 
+cd ..
+ls
+cat inventory 
+cat inventory 
+ls
+cat script.sh 
+cat index.html
+cat loop.yaml
+ls
+cat task4_5.yaml 
+cat script.sh 
+ls
+cta inventory 
+cat inventory 
+cd ..
+cd ..
+ cd ..
+cd /var/
+cd www/
+cd html/
+ls
+cat raju.txt
+cat raju.txt
 cd ..
 cd ..
 cd ..
 cd root/
 ls
-cd Azhar/
+cd subash/
 ls
-cat var_inventory 
-cat var-ext.yaml 
-cat var3.yaml 
-cd ..
-cd priya/
-cd Priya/
-ls
-cat var-ext.yaml 
-cat var6.yaml 
-ls
-ls
-cat master.yaml 
-cd ..
-cd Prayerna/
+cd variable-lab-part3
 ls
 cd ..
+cd variable-lab-part2
+LS
 ls
-cd Azhar/
+cat inventory 
+cd ..
+cd variable-lab-part1
 ls
-cat var_inventory 
+cd group_vars/
+cd ..
+cd ..
 cd ..
 cd Priya/
 ls
-cat inventory 
+cd lab-excercise-part-1
 ls
+cat lab-excercise-part-2 
+cd ..
 cd ..
 ls
-cd Prayerna/
-ls
-rename var1.yml var1.yaml
-rename -v var1.yml var1.yaml
-cat var1.yaml
-cat var1.yml
-cat var2.yml
-cat var3.yml
-cat var6.yml
-rm -rf var1.yml
-rm -rf var2.yml
-rm -rf var3.yml
-rm -rf var4.yml
-rm -rf var6.yml
+cd Pramoda_Jena/
 ls
 cd ..
+cd Raja/
 ls
-cd Priya/
+cd Lab3/
 ls
-cat master.yaml 
+cat inventory 
 cd ..
-cd Azhar/
-ls
-cat var_inventory 
 cd ..
-cd prayerna
 ls
-Cd Prayerna/
-sudo -s cd Prayerna/
-la
-ls
-cd Prayerba
-cd Prayerna
-ls
-vi inventory 
-cat inventory 
-vi inventory
-vi inventory
-cat inventory 
-vi inventory 
-cat inventory 
-ls
-vi new_index.yaml
-cat new_index.yaml
-vi ins_httpd.yaml
-vi start_httpd.yaml
-cat start_httpd.yaml
-vi user.yaml
-ls
-vi clonegit.yaml
-vi clonegit.yaml
-ls
+history
 clear
-ls
-pwd
-cd /root
-pwd
-mv /home/ec2-user/Prayerna/ /root
-ls
-cd Prayerna/
-ls
-pwd
-cd ..
-pwd
-ls
-cd Prayerna/
-ls
-ls
-cd prayerna/
-cd prayerna\
-cd prayerna\
-cd ..
-cd ec2-user/
-ls
-cd Prayerna/
-ls
-vi c_grp.yaml
-vi c_grp.yaml
-cat c_grp.yaml 
-
-ls
-rm -rf c_grp.yaml 
-vi c_grp.yaml
-cat c_grp.yaml 
-vi  ins_git.yaml 
-cat  ins_git.yaml 
-ls
-vi index.html
-touch index.html
-vi index.html 
-rm -rf index.html 
-cd ..
-ls
-cp ind.html prayerna/
-cp ind.html /prayerna/
-cp ind.html ../prayerna/
-cd prayerna/
-cd .
-ls
-cd prayerna/
-cd ..
-ls 
-cd prayerna/
-cd ec2-user/
-cd prayerna
-sudo -s
+cd
+ls -lrt
+cd Priya/
+ls -lrt
+cd
+cd Kathambari/
+yum install tree -y
+tree
+mkdir Part2
+cp rajesh-mumbai.pem Part2/
+cp inventory Part2/
+cp index.html Part2/

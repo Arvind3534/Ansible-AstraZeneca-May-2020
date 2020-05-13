@@ -1,0 +1,12 @@
+---
+- name: This installs and start httpd variable taken from inventroy
+  hosts: all
+  tasks:
+  - name: Install httpd package
+    yum: name=httpd state=installed
+  - name: start httpd service
+    service: name=httpd state=started
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test {{ myname }}"
+ 

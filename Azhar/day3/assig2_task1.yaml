@@ -1,0 +1,17 @@
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  vars_files:
+    - "var-ext.yaml"
+  tasks:
+  - name: Install the httpd apps
+    yum: name={{ Service }} state=installed
+  - name: start the httpd service
+    service: name={{ Service }} state=started
+  - name: Ansible vars_prompt print example.
+    debug:
+      msg: "{{ Service }}"
+  - name: Ansible vars_prompt print example.
+    debug:
+      msg: "The service {{ Service }} is installed"
+

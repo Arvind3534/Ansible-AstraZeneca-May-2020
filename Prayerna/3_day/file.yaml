@@ -1,0 +1,26 @@
+
+---
+- name: This sets up an httpd webserver
+  hosts: all
+  tasks:
+  - name: Install the httpd apps
+    yum: name=httpd state=installed
+  - name: start the httpd service
+    service: name=httpd state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+    notify:
+      - Restart Apache
+  - name: Ansible debug print example.
+    debug:
+      msg: "this is test {{ myname }}"
+  - name: Run a script with arguments (using 'cmd' parameter)
+    script:
+      cmd: script.sh
+
+  handlers:
+     - name: Restart Apache
+       service: name=httpd state=restarted
+

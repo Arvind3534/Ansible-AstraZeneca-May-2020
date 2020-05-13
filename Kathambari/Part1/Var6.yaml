@@ -1,0 +1,29 @@
+---
+- name: Assignment 4
+  hosts: all
+  vars_prompt:
+    - name: myname
+      prompt: "What is your name?"
+      private: no
+    - name: package
+      prompt: "Which package do you want to install?"
+      private: no
+    - name: service
+      prompt: "Which service do you want to start?"
+      private: no
+  tasks:
+  - name: Install HTTPD
+    yum: name={{ package }} state=installed
+  - name: Start HTTPD
+    service: name={{ service }} state=started
+  - name: Create HTML File
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "{{ myname }} installed {{ package }}"
+
+
+# Following in CLI
+# ansible-playbook -i inventory Var6.yaml -e myname="Kat" -e package="httpd" -e service="httpd"
+
+

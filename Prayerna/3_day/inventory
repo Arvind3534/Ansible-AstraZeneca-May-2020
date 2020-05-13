@@ -1,0 +1,19 @@
+[web]
+13.234.78.93 myname="Prayerna in web 1"
+15.206.145.59 myname="Prayerna in web 2"
+
+[db]
+13.233.115.181
+
+[gog:children]
+web
+db
+
+[gog:vars]
+myname="Prayerna in inventory"
+package="httpd"
+service="httpd"
+ansible_user=ec2-user
+ansible_ssh_private_key_file=rajesh-mumbai.pem
+ansible_become=yes
+

@@ -1,0 +1,4 @@
+package: "httpd"
+service: "httpd"
+myname: "Pramoda Kumar in group_vars"
+

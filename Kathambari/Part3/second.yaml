@@ -1,0 +1,5 @@
+---
+- name: This is second.yaml
+  debug:
+    msg: "Message of second.yaml"
+...

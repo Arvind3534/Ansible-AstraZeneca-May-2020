@@ -1,0 +1,15 @@
+---
+- name: This sets a httpd webserver
+  hosts: all
+  vars_prompt:
+  - name: "package"
+    prompt: "Which package Do you want to install?"
+    private: no
+  tasks:
+  - name: Install the httpd apps
+    yum: name={{ package }} state=installed
+  - name: start the service
+    service: name={{ package }} state=started
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+...

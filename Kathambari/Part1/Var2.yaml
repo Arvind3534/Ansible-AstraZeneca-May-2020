@@ -1,0 +1,16 @@
+- name: Assignment 2
+  hosts: all
+  vars:
+    myname: "Kathambari in playbook"
+    package: "httpd"
+    service: "httpd"
+  tasks:
+  - name: Install HTTPD
+    yum: name={{ package }} state=installed
+  - name: Start HTTPD
+    service: name={{ service }} state=started
+  - name: Create HTML File
+    copy: dest=/var/www/html/ src="index.html"
+  - name: Ansible debug print example.
+    debug:
+      msg: "{{ myname }} installed {{ package }}"
