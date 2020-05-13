@@ -238,6 +238,87 @@ https://www.devopsschool.com/blog/ansible-variable-lab-excercise-part-1/
 
 ROle
 =====================================
+13.234.78.93
+
+
+Playbook
+	Tasks
+	Variable
+	Handlers
+	Templates
+	files
+============================
+What is role?
+	Is a way to org.....following....
+	in a directory ske which ansible understand.
+
+	Tasks		DONE
+	Variable	DONE
+	Handlers	DONE
+	Templates
+	files
+
+	So you can easily
+		- manage 
+		- test	
+		- Share
+		- Extend
+		- Debug
+=============================
+TYPES of role
+	- yours - custom
+	- others - by communtity
+		https://galaxy.ansible.com/
+
+[root@ip-172-31-31-214 wd]# ansible-galaxy init role1
+- Role role1 was created successfully
+[root@ip-172-31-31-214 wd]# ls
+role1
+[root@ip-172-31-31-214 wd]# tree
+.
+└── role1
+    ├── defaults		# VARIABLE
+    │   └── main.yml
+    ├── files			# script and ref file.
+    ├── handlers		# handlers tasks
+    │   └── main.yml
+    ├── meta			#Meta
+    │   └── main.yml
+    ├── README.md
+    ├── tasks			# Tasks
+    │   └── main.yml
+    ├── templates		# only .j2
+    ├── tests
+    │   ├── inventory
+    │   └── test.yml
+    └── vars			# VARIABLE
+        └── main.yml
+
+9 directories, 8 files
+
+Project - https://www.devopsschool.com/blog/ansible-role-project-1/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
