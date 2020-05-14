@@ -161,6 +161,128 @@ Ansible Vault
  1128  ansible-playbook -i inventory web.yaml --vault-password-file=pas
  1129  ansible-playbook -i inventory web.yaml --vault-password-file=pass
 
+=====================================================================================
+=====================================================================================
+=====================================================================================
+=====================================================================================
+=====================================================================================
+
+
+Problem with Ansible?
+	For Enterprises
+=================================
+- Org Dashboard
+	WHO has run
+	What was run
+	What is the results.
+- Scheduling
+- Notification
+	Email
+	Chat
+	Dhadaboard
+- How to manage Multiple org and
+	Each has their 
+		My Plabook/roles
+		My templates
+		My files
+		My permission
+		My Intentory
+	Not access to others.
+- authentication
+	Password
+	LDAP
+- ROles based authorization
+	Org Access
+	Org1 
+		admin
+			users
+		dev	
+			Org
+		qa
+			Org
+
+	Org2
+		
+
+
+Solution - Ansible Tower
+
+What is Ansible Tower?
+========================
+	- GUI BASED ACS
+	- Dashboard
+	- Authentication
+	- Authrization
+	- Notification
+	- Mul org mgmt
+
+	From Redhat.
+	Release
+	 	Ansible tower - PAID
+		Ansible AWX - FREE
+		- Latest version but Not Prod release - No Support.
+	Written in Python
+	
+Ansible Tower Arch
+=========================
+Web server - nginx
+Data base - PostGrs
+Queue - ActiveMQ
+
+How to Install it?
+
+35.154.28.24
+
+
+$ sudo yum install wget -y
+$ wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+$ yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+$ sudo rpm -i epel-release-latest-7.noarch.rpm
+$ sudo yum update -y 
+$ sudo yum install ansible -y
+
+
+https://www.devopsschool.com/blog/ansible-tower-install-and-setup-quick-guide/
+
+# Location - https://releases.ansible.com/ansible-tower/setup/
+wget https://releases.ansible.com/ansible-tower/setup/ansible-tower-setup-3.5.1-1.tar.gz
+tar -zxvf ansible-tower-setup-3.5.1-1.tar.gz
+cd ansible-tower-setup-3.5.1-1
+
+
+https://releases.ansible.com/ansible-tower/setup/ansible-tower-setup-3.6.4-1.tar.gz
+
+===================================================================
+Workflow with Ansible Tower
+=====================================
+Step 1 - Create a org - devopsschool
+Step 2 - Create a team
+Step 3 - Create a user
+Step 4 - Create a inventory
+Step 5 - Create a Credentials
+Step 6 - Ceate a playbook?  AKA projects.
+Step 7 - Template AKA "ansible-playbook -i inventory playbook.yaml -u user -k pas"
+Step 8 - RUN IT
+
+
+https://35.154.28.24/
+admin
+admin123
+
+
+
+13.232.99.197
+13.126.9.32
+
+
+
+	
+
+
+
+
+
+
 
 
 
