@@ -275,10 +275,35 @@ admin123
 13.126.9.32
 
 
+==========================================
+How to get 
+- Slides - https://www.devopsschool.com/slides
+https://www.devopsschool.com/pdf/
 
-	
+- Notes - 
+- Video- https://www.devopsschool.com/videos
+- Sample Program - Github
 
+- Tutorials
+https://www.devopsschool.com/tutorial/ansible/
+https://www.devopsschool.com/blog/?s=ansible
 
+https://github.com/orgs/devopsschool-training-notes/dashboard
+https://github.com/orgs/devopsschool-sample-programs/dashboard
+https://github.com/orgs/devopsschool-projects/dashboard
+https://github.com/orgs/devopsschool-demo-temporary/dashboard
+https://github.com/orgs/devopsschool-demo-labs-projects/dashboard
+https://github.com/orgs/devopsschool-assignment-projects/dashboard
+https://github.com/orgs/certifications-tutorials/dashboard
+
+How to reach out tom?
+http://rajeshkumar.xyz/
+
+https://www.youtube.com/channel/UCrXr49kBvXJeQMMl2693c4g
+
+Quiz and Exam Dump
+
+https://www.devopsschool.com/lms
 
 
 
