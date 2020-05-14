@@ -1,0 +1,105 @@
+ACS
+13.234.78.93
+
+Windows ARS
+52.66.197.188
+Administrator
+rkRJoi8zJijk;R7u;llkwSi73dC2.QwZ
+
+==================================
+Ansible in Windows
+==================================
+Anisble Vault
+==================================
+Ansible Tower
+==================================
+
+
+ACS			ARS
+
+Linux	 `		WINDOWS
+			WINRM		
+
+What is WINRM?
+========================
+Its kind of agent
+Its a tool to connect windows from remote.
+This works on HTTP
+Found in windows 2016 by default.
+This need to be enabled and running.
+====================================
+			POWERSHELL 3.0
+			DOT NET 4.0
+
+winrm coversion 
+
+========================================
+
+[windows]
+52.66.197.188
+
+[windows:vars]
+ansible_user: Administrator
+ansible_password: rkRJoi8zJijk;R7u;llkwSi73dC2.QwZ
+ansible_connection: winrm
+ansible_winrm_transport: basic
+
+# ansible_winrm_scheme=http
+# ansible_winrm_scheme=https
+ansible_winrm_server_cert_validation=ignore
+# https://www.devopsschool.com/blog/ansible-error-while-executing-adhoc-commands-playbook-in-windows-remote/
+
+
+[web]
+13.234.78.93 myname="rajesh kumar in 93"  
+15.206.145.59 myname="rajesh kumar in 59"    
+
+[db]
+13.127.85.44
+
+[gog:children]
+web
+db
+
+[gog:vars]
+myname="rajesh kumar in inventory"
+package="httpd"
+service="httpd"
+ansible_user=ec2-user
+ansible_ssh_private_key_file=rajesh-mumbai.pem
+ansible_become=yes
+
+Windows Remote Host - ARS
+https://www.devopsschool.com/tutorial/ansible/ansible-windows-remote-setup.html
+
+
+Windows ACS - Linux
+Ansible Control Server Setup for Windows
+
+
+Ansible Adhoc Commands for Windows
+https://www.devopsschool.com/tutorial/ansible/ansible-windows-adhoc-commands.html
+
+Ansible Playbook for Windows
+https://www.devopsschool.com/tutorial/ansible/ansible-windows-playbooks.html
+
+
+Ansible Windows Module
+https://docs.ansible.com/ansible/latest/modules/list_of_windows_modules.html
+
+========================================================
+
+Write a Adhoc or PLaybook
+----------------------------
+Which would create a dir - C:\devopsschool\<firstname>
+
+Create a file - C:\devopsschool\<firstname>\<lastname.txt>
+I love India.
+I love make in India.
+
+
+
+
+
+
+
