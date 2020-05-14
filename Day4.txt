@@ -97,6 +97,71 @@ Create a file - C:\devopsschool\<firstname>\<lastname.txt>
 I love India.
 I love make in India.
 
+=======================================================================================
+========================================================================================
+==================================
+Ansible Vault
+==================================
+
+ 1065  more inventory
+ 1066  clear
+ 1067  ansible-vault
+ 1068  ansible-vault encrypt inventory
+ 1069  ls
+ 1070  more inventory
+ 1071  clear
+ 1072  ls
+ 1073  vi inventory
+ 1074  clear
+ 1075  ls
+ 1076  ansible -i inventory web.yaml
+ 1077  clear
+ 1078  ansible-playbook -i inventory web.yaml
+ 1079  ansible-playbook -help
+ 1080  clear
+ 1081  ansible-playbook -i inventory web.yaml --ask-vault-pass
+ 1082  clear
+ 1083  ls
+ 1084  ansible-vault
+ 1085  ansible-vault decrypt inventory
+ 1086  ls
+ 1087  clear
+ 1088  more inventory
+ 1089  clea
+ 1090  clear
+ 1091  ls
+ 1092  ansible-vault
+ 1093  ansible-vault create raju
+ 1094  ls
+ 1095  more raju
+ 1096  clear
+ 1097  ansible-vault edit raju
+ 1098  more raju
+ 1099  ansible-vault view raju
+ 1100  more raju
+ 1101  clear
+ 1102  ansible-vault
+ 1103  ansible-vault rekey raju
+ 1104  clear
+ 1105  ls
+ 1106  history
+ 1115  vi pass
+ 1116  vi pass
+ 1117  more inventory
+ 1118  clear
+ 1119  ls
+ 1120  ansible-vault encrypt inventory
+ 1121  ansible -h
+ 1122  ansible -h
+ 1123  clear
+ 1124  ls
+ 1125  ansible -i inventory web.yaml
+ 1126  clear
+ 1127  ansible-playbook -i inventory web.yaml
+ 1128  ansible-playbook -i inventory web.yaml --vault-password-file=pas
+ 1129  ansible-playbook -i inventory web.yaml --vault-password-file=pass
+
+
 
 
 
